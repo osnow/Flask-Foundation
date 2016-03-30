@@ -6,10 +6,10 @@ from .models import User
 
 
 class LoginForm(Form):
-    username = TextField(u'Username', validators=[validators.required()])
-    password = PasswordField(u'Password', validators=[validators.optional()])
+    sequence = TextField()
+    #password = PasswordField(u'Password', validators=[validators.optional()])
 
-    def validate(self):
+    '''def validate(self):
         check_validate = super(LoginForm, self).validate()
 
         # if our validators do not pass
@@ -27,4 +27,4 @@ class LoginForm(Form):
             self.username.errors.append('Invalid username or password')
             return False
 
-        return True
+        return True'''

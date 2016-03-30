@@ -3,11 +3,11 @@
 from flask import Flask
 from webassets.loaders import PythonLoader as PythonAssetsLoader
 
-from appname import assets
-from appname.models import db
-from appname.controllers.main import main
+from prog_proj import assets
+from prog_proj.models import db
+from prog_proj.controllers.main import main
 
-from appname.extensions import (
+from prog_proj.extensions import (
     cache,
     assets_env,
     debug_toolbar,
@@ -22,7 +22,7 @@ def create_app(object_name):
 
     Arguments:
         object_name: the python path of the config object,
-                     e.g. appname.settings.ProdConfig
+                     e.g. prog_proj.settings.ProdConfig
     """
 
     app = Flask(__name__)

@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}Flask Login Example{% endblock %}
+{% block title %}Submit{% endblock %}
 
 {% block body %}
-    <h1 class="text-center">Flask Login Example</h1>
+    <h1 class="text-center">Submit AA sequence</h1>
 
     <div class="row">
         <div class="col-md-4"></div>
@@ -20,7 +20,7 @@
                     {% endif %}
                     {{ form.username(class_="form-control") }}
                 </div>
-                <div class="form-group">
+                <!--<div class="form-group">
                     {{ form.password.label }}
                     {% if form.password.errors %}
                         {% for e in form.password.errors %}
@@ -28,7 +28,7 @@
                         {% endfor %}
                     {% endif %}
                     {{ form.password(class_="form-control") }}
-                </div>
+                </div>-->
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
