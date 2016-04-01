@@ -4,13 +4,13 @@ import os
 
 from flask.ext.script import Manager, Server
 from flask.ext.script.commands import ShowUrls, Clean
-from appname import create_app
-from appname.models import db, User
+from prog_proj import create_app
+from prog_proj.models import db, User
 
 # default to dev config because no one should use this in
 # production anyway
 env = os.environ.get('APPNAME_ENV', 'dev')
-app = create_app('appname.settings.%sConfig' % env.capitalize())
+app = create_app('prog_proj.settings.%sConfig' % env.capitalize())
 
 manager = Manager(app)
 manager.add_command("server", Server())
